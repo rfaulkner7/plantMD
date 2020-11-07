@@ -6,6 +6,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import Home from './Pages/Home'
 
 
 export default function App() {
@@ -24,7 +25,7 @@ export default function App() {
           <Results/>
         </Route>
         <Route path = "/">
-          <h1>Hiya</h1>
+          <Home/>
         </Route>
       </Switch>
     </BrowserRouter>

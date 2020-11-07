@@ -9,3 +9,34 @@ Body {
   align-items: center;
   justify-content: center;
 }
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ncrFormField {
+  margin-top: 4%;
+  margin-bottom: 4%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  background: #ffffff;
+  /* Border / secondary */
+
+  text-align: center;
+  border: 1px solid rgba(60, 60, 67, 0.29);
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.ncrFormField:focus {
+  outline: none !important;
+  box-shadow: 0px 0px 8px #a0dffd;
+  border-radius: 8px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
