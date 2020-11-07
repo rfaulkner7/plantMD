@@ -7,10 +7,27 @@ import {
   Route,
 } from "react-router-dom";
 
-function App() {
+
+export default function App() {
   return (
-<h1> HI</h1>
+    // <BrowserRouter>
+    //   <Switch>
+    //     <Route path = "Results">
+    //       <Results/>
+    //     </Route>
+    //   </Switch>
+    // </BrowserRouter>
+    <div class = "bg">
+    <BrowserRouter>
+      <Switch>
+        <Route path = "/results">
+          <Results/>
+        </Route>
+        <Route path = "/">
+          <h1>Hiya</h1>
+        </Route>
+      </Switch>
+    </BrowserRouter>
+    </div>
   );
 }
-
-export default App;
