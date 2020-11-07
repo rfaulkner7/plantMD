@@ -3,11 +3,7 @@
 }
 
 Body {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: #282c34 !important;
 }
 
 .center {
@@ -15,9 +11,19 @@ Body {
   margin-right: auto;
 }
 
+.white {
+  color: white;
+  margin: auto;
+  margin-bottom: 10%;
+}
+
+.buttonStuff {
+  margin-bottom: 5%;
+}
+
 .ncrFormField {
   margin-top: 4%;
-  margin-bottom: 4%;
+  margin-bottom: 10%;
   padding-top: 4%;
   padding-bottom: 4%;
   background: #ffffff;
@@ -35,8 +41,37 @@ Body {
   border-radius: 8px;
 }
 
+.botMarg {
+  padding-bottom: 10%;
+}
+
+.snippet {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+.imgContainer {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  width: 115px;
+  height: 115px;
+  line-height: 115px;
+  margin-bottom: 10%;
+}
+
 .center {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.bg {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10%;
 }

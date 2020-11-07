@@ -7,9 +7,13 @@ import {
   Route,
 } from "react-router-dom";
 import Home from './Pages/Home'
+import 'semantic-ui-css/semantic.min.css'
+import React from "react"
 
 
 export default function App() {
+  const [file, setFile] = React.useState("lol")
+
   return (
     // <BrowserRouter>
     //   <Switch>
@@ -21,14 +25,12 @@ export default function App() {
     <div class = "bg">
     <BrowserRouter>
       <Switch>
-        <Route path = "/results">
-          <Results/>
-        </Route>
         <Route path = "/">
-          <Home/>
+          <Home imgFile = {file} setFile = {setFile}/>
         </Route>
       </Switch>
     </BrowserRouter>
+    <Results imgFile = {file} setFile = {setFile}/>
     </div>
   );
 }
