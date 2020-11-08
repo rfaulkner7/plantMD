@@ -15,14 +15,28 @@ export default function Results (props){
     );
 
     function DiseaseList(){
+        if (props.possibleDiseases.length > 0){
+        try {
         const listData = props.possibleDiseases.map((disease) => 
             <div>
                 <Dropdown name = {disease.name} scientificName = {disease.scientific_name}
                 naturalSolution = {disease.natural_solution} chemicalSolution = {disease.chemical_solution}
                 externalLink = {disease.external_link}/>
             </div>
-        
         )
         return(<div>{listData}</div>)
+        } catch (e) {
+            return <div class = "center">
+                <h1> Nothing to Report!</h1>
+            </div>
+        }
+        }
+        if(props.possibleDiseases.length === 0){
+            return(
+                <div class = "center">
+                    <h1>Nothing to Report!</h1>
+                </div>
+            )
+        }
     }
 }

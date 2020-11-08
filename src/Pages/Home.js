@@ -158,6 +158,7 @@ export default function Home (props){
     // }
 
     function sendSymptons(e){
+        console.log(currSymptoms)
         const options = {
             url: 'https://be6c85af4cb9.ngrok.io/symptom/guess',
             body: {
@@ -174,10 +175,11 @@ export default function Home (props){
                 console.error(error)
             } else {
                 // console.log(body.diseases)
+                console.log(body.diseases)
                 props.setPossibleDiseases(body.diseases)
             }
         })
-        console.log(options)
+        // console.log(options)
     }
 
     function sendFile(e){
@@ -201,18 +203,17 @@ export default function Home (props){
             if(error){
                 console.error(error)
             } else {
-                console.log(body)
+                // let holder = [body.prediction[1].id]
+                if(body != null){
+                console.log([body.prediction[1]])
+                props.setPossibleDiseases([body.prediction[1]])
+                }
+                else{
+                    props.setPossibleDiseases([])
+                }
+                // props.setPossibleDiseases(body)
+                // props.setPossibleDiseases(holder)
             }
         })
-        // imageToBase64(file).then(
-        //     (response) => {
-        //         console.log("response:", response);
-        //     }
-        // )
-        // .catch(
-        //     (error) => {
-        //         console.log("error:", error )
-        //     }
-        // )
     }
 }
