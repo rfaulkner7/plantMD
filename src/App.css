@@ -73,5 +73,53 @@ Body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 10%;
+  margin-top: 5%;
+}
+
+.diseaseName {
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  max-width: 39vw;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.space {
+  margin-right: 4%;
+  margin-left: 4%;
+}
+
+.wider {
+  width: 125%;
+}
+
+.centerStuff {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lilSpace {
+  margin-bottom: 1%;
+}
+
+.blue {
+  color: #17a2b8;
+}
+
+#leftLittleSpace {
+  margin-left: 2%;
+}
+
+.leftSpace {
+  margin-left: 5%;
+}
+
+h1 {
+  color: #17a2b8;
 }

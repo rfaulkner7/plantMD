@@ -9,10 +9,14 @@ import {
 import Home from './Pages/Home'
 import 'semantic-ui-css/semantic.min.css'
 import React from "react"
+// import MultiSelect from 'multiselect-react-dropdown'
 
 
 export default function App() {
   const [file, setFile] = React.useState("lol")
+  const [symptoms, setSymptoms] = React.useState()
+  const [possibleDiseases, setPossibleDiseases] = React.useState([])
+  const [disease, setDisease] = React.useState()
 
   return (
     // <BrowserRouter>
@@ -26,11 +30,13 @@ export default function App() {
     <BrowserRouter>
       <Switch>
         <Route path = "/">
-          <Home imgFile = {file} setFile = {setFile}/>
+          <Home
+          possibleDiseases = {possibleDiseases} setPossibleDiseases = {setPossibleDiseases}
+          imgFile = {file} setFile = {setFile} symptoms = {symptoms} setSymptoms = {setSymptoms} setDisease = {setDisease}/>
         </Route>
       </Switch>
     </BrowserRouter>
-    <Results imgFile = {file} setFile = {setFile}/>
+    <Results possibleDiseases = {possibleDiseases} symptoms = {symptoms} imgFile = {file} setFile = {setFile} disease = {disease}/>
     </div>
   );
 }
