@@ -7,7 +7,7 @@ export default function Results (props){
         <div class = "bg">
             <div class = "center">
             <h1>
-                Results:
+                Possible Diseases:
             </h1>
             </div>
             <DiseaseList/>
